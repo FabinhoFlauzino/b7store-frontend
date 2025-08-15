@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { HeaderIcon } from "./header-icon"
 import { useState } from "react"
+import { HeaderSearch } from "./header-search"
 
 type MenuItem = {
   label: string;
@@ -75,7 +76,7 @@ export function Header() {
       )}
 
       <div className="p-6 md:hidden">
-        Busca mobile
+        <HeaderSearch />
       </div>
     </header>
   )
