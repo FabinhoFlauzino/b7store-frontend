@@ -13,8 +13,8 @@ type MenuItem = {
 
 export function Header() {
   const menu: MenuItem[] = [
-    { label: "Camisa", href: "/categoaries/camisa" },
-    { label: "Kits", href: "/categoaries/kitsd" },
+    { label: "Camisetas", href: "/categoaries/camisa" },
+    { label: "Kits B7Web", href: "/categoaries/kits" },
   ]
 
   const [menuOpened, setMenuOpened] = useState(false)
@@ -36,6 +36,26 @@ export function Header() {
               />
             </Link>
           </div>
+
+          <div className="flex-1">
+            <div className="w-full hidden md:flex items-center px-6 gap-6">
+              <div className="flex-1">
+                <ul className="flex gap-10">
+                  {menu.map(item => (
+                    <li key={item.label}>
+                      <Link href={item.href} className="font-medium text-gray-600">
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="w-80">
+                <HeaderSearch />
+              </div>
+            </div>
+          </div>
+
           <div className="flex gap-4">
             <Link href={"/my-orders"}>
               <HeaderIcon src="/assets/ui/user-line.png" alt="Perfil" />
@@ -56,7 +76,7 @@ export function Header() {
       </div>
 
       {menuOpened && (
-        <div className="md:hidden">
+        <div className="md:hidden pb-6">
           {menu.map(item => (
             <Link key={item.label} href={item.href}>
               <div className="p-6 border-b border-gray-200 flex items-center justify-between">
@@ -75,7 +95,7 @@ export function Header() {
         </div>
       )}
 
-      <div className="p-6 md:hidden">
+      <div className="p-6 pt-0 md:hidden">
         <HeaderSearch />
       </div>
     </header>
