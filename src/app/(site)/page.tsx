@@ -1,7 +1,10 @@
 import { Banners } from "@/components/home/banners";
+import MostSoldProduct from "@/components/home/most-sold-product";
+import MostViewedProduct from "@/components/home/most-viewed-product";
 import { ProductListSkeleton } from "@/components/home/product-list-skeleton";
 import { data } from "@/data";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Page() {
   return (
@@ -54,8 +57,13 @@ export default function Page() {
         </div>
       </div>
 
-      <ProductListSkeleton />
-      <ProductListSkeleton />
+     <Suspense fallback={<ProductListSkeleton />}>
+      <MostViewedProduct />
+     </Suspense>
+
+     <Suspense fallback={<ProductListSkeleton />}>
+      <MostSoldProduct />
+     </Suspense>
     </div>
   )
 }
