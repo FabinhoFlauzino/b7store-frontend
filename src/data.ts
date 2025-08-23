@@ -34,5 +34,9 @@ export const data = {
       price: 249.90,
       liked: true
     },
+  ], 
+  menu: [
+    { label: "Camisetas", href: "/categoaries/camisa" },
+    { label: "Kits B7Web", href: "/categoaries/kits" },
   ]
 }

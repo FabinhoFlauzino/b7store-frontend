@@ -5,6 +5,7 @@ import Link from "next/link"
 import { HeaderIcon } from "./header-icon"
 import { useState } from "react"
 import { HeaderSearch } from "./header-search"
+import { data } from "@/data"
 
 type MenuItem = {
   label: string;
@@ -12,11 +13,6 @@ type MenuItem = {
 }
 
 export function Header() {
-  const menu: MenuItem[] = [
-    { label: "Camisetas", href: "/categoaries/camisa" },
-    { label: "Kits B7Web", href: "/categoaries/kits" },
-  ]
-
   const [menuOpened, setMenuOpened] = useState(false)
 
   return (
@@ -41,7 +37,7 @@ export function Header() {
             <div className="w-full hidden md:flex items-center px-6 gap-6">
               <div className="flex-1">
                 <ul className="flex gap-10">
-                  {menu.map(item => (
+                  {data.menu.map(item => (
                     <li key={item.label}>
                       <Link href={item.href} className="font-medium text-gray-600">
                         {item.label}
@@ -77,7 +73,7 @@ export function Header() {
 
       {menuOpened && (
         <div className="md:hidden pb-6">
-          {menu.map(item => (
+          {data.menu.map(item => (
             <Link key={item.label} href={item.href}>
               <div className="p-6 border-b border-gray-200 flex items-center justify-between">
                 <div className="font-medium text-lg text-gray-500">
