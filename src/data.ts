@@ -36,7 +36,7 @@ export const data = {
     },
   ], 
   menu: [
-    { label: "Camisetas", href: "/categoaries/camisa" },
-    { label: "Kits B7Web", href: "/categoaries/kits" },
+    { label: "Camisetas", href: "/categories/camisa" },
+    { label: "Kits B7Web", href: "/categories/kits" },
   ]
 }
