@@ -38,8 +38,8 @@ export function ProductListFilter() {
 
       <div className="flex flex-col md:flex-row gap-8 mt-8">
         <div className={`flex-1 md:max-w-70 ${filterOpened ? "block" : "hidden"} md:block`}>
-          <FilterGroup />
-          <FilterGroup />
+          <FilterGroup id="tech" name="Tecnologias"/>
+          <FilterGroup id="color" name="Cores"/>
         </div>
         <div className="flex-1 grid grid-cols-1 md:grid-cols-3">
           <div className="">...</div>
