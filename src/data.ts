@@ -38,5 +38,16 @@ export const data = {
   menu: [
     { label: "Camisetas", href: "/categories/camisa" },
     { label: "Kits B7Web", href: "/categories/kits" },
-  ]
+  ],
+  product: {
+    id: 1, 
+    label: "Camisa PHP", 
+    images: [
+      "/assets/products/camiseta-php.png",
+      "/assets/products/camiseta-laravel-branca.png"
+    ], 
+    price: 19.90,
+    liked: false,
+    description: "Alguma descrição do produto"
+  }
 }
