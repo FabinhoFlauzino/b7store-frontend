@@ -1,0 +1,14 @@
+export function RelatedProductListSkeleton() {
+  return (
+    <div className="mt-10 animate-pulse">
+      <div className="bg-gray-200 rounded w-52 h-8 mb-4 mx-auto md:mx-0"></div>
+      <div className="mt-9 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="bg-gray-200 h-80 rounded"></div>
+        <div className="bg-gray-200 h-80 rounded"></div>
+        <div className="bg-gray-200 h-80 rounded"></div>
+        <div className="bg-gray-200 h-80 rounded"></div>
+      </div>
+    </div>
+
+  )
+}
